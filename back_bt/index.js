@@ -1,0 +1,1 @@
+console.log("Texto de prueba para nodemon Best Trucks Col")
