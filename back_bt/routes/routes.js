@@ -3,14 +3,12 @@ const router = express.Router();
 const inventarioController = require("../controllers/inventario.controller")
 
 
-router.post("/crear-ingreso", inventarioController.crearIngreso)
-router.get("/listar-inventario", inventarioController.listarInventario)
-router.get("/buscar_vehiculo/:busqueda", inventarioController.buscarInventario)
-router.delete("/borrar-ingreso/:id", inventarioController.borrarIngreso)
-router.put("/actualizar-ingreso/:id", inventarioController.actualizarInventario)
 
-
-
+router.post("vehiculos/crear-ingreso", inventarioController.crearIngreso)
+router.get("vehiculos/listar-inventario", inventarioController.listarInventario)
+router.get("vehiculos/buscar_vehiculo/:busqueda", inventarioController.buscarInventario)
+router.delete("vehiculos/borrar-ingreso/:id", inventarioController.borrarIngreso)
+router.put("vehiculos/actualizar-ingreso/:id", inventarioController.actualizarInventario)
 
 
 

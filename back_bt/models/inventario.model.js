@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const { type } = require("os");
 
 const inventarioSchema = mongoose.Schema({
     marca: {
@@ -14,7 +13,7 @@ const inventarioSchema = mongoose.Schema({
     }, combustible: {
         type: String,
         required: true,
-    }, cilindrara: {
+    }, cilindrada: {
         type: Number,
         required: true,
     }, potencia: {
@@ -41,4 +40,4 @@ const inventarioSchema = mongoose.Schema({
     versionKey: false
 })
 
-module.exports = mongoose.model("Inventario", inventarioSchema)
+module.exports = mongoose.model("inventario", inventarioSchema)
