@@ -34,6 +34,16 @@ const inventarioSchema = mongoose.Schema({
     }, precio: {
         type: Number,
         required: true,
+    }, imagen: {
+        type: String,
+        required: false,
+    }, fecha_ingreso: {
+        type: Date,
+        default: Date.now,
+    }, fecha_finalizacion: {
+        type: Date,
+        default: Date.now,
+        required: false,
     }
 }, {
     timestamps: true,

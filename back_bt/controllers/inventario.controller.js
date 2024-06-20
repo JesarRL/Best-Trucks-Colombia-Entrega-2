@@ -1,5 +1,22 @@
 let inventarioModel = require("../models/inventario.model");
 
+exports.crearIngresos = async (req, res) => {
+    try {
+        for (const camioneta of req.body.data) {
+            console.log(camioneta);
+            let entrada = new inventarioModel(camioneta)
+            await entrada.save()
+        }
+
+        res.status(200).send({ camioneta })
+
+    } catch (error) {
+        console.log(error);
+        res.status(500).send({ message: "Error al crear el ingreso" })
+    }
+}
+
+
 exports.crearIngreso = async (req, res) => {
     try {
         let camioneta = new inventarioModel(req.body)

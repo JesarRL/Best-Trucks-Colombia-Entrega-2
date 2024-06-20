@@ -6,7 +6,7 @@ conectarDB()
 
 
 app.use(express.json())
-app.use("/api/inventario", require("./routes/inventario"))
+app.use("/api", require("./routes/routes"))
 
 //app.get("/", (req, res) => {
 // res.send("Que gran putas le pasa perro?");
